@@ -32,6 +32,7 @@ app.get('/room', async (req, res) => {
     const [results] = await db.query('SELECT * FROM room');
     res.json(results);
   } catch (err) {
+    console.error('❌ Chi tiết lỗi truy vấn /room:', err);
     res.status(500).json({ error: 'Lỗi truy vấn' });
   }
 });
