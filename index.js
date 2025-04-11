@@ -15,11 +15,13 @@ app.use(express.json());
 
 // Kết nối MySQL
 const db = mysql.createPool({
-  host: 'localhost',
+  host: 'gondola.proxy.rlwy.net',
+  port: 34491,
   user: 'root',
-  password: '',
-  database: 'qlks'
+  password: 'GHinzlDxpgKJtAXSpVxkVPLmWOLuteNQ',
+  database: 'railway'
 });
+
 
 // ROUTES
 app.get('/', (req, res) => {
