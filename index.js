@@ -202,6 +202,24 @@ app.post('/bill', async (req, res) => {
     res.status(500).json({ error: 'Lỗi tạo hóa đơn' });
   }
 });
+// Thanh toán
+app.post("/payment", (req, res) => {
+  const { billid, amount, payment_method } = req.body;
+  const insertQuery = `INSERT INTO payment (billid, amount, payment_method) VALUES (?, ?, ?)`;
+
+  db.query(insertQuery, [billid, amount, payment_method], (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.json({ message: "Thanh toán thành công!", paymentid: result.insertId });
+  });
+});
+
+// API lấy danh sách thanh toán
+app.get("/payment", (req, res) => {
+  db.query("SELECT * FROM payment", (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.json(result);
+  });
+});
 
 // Khởi động server
 app.listen(PORT, () => {
