@@ -143,8 +143,13 @@ app.get('/staff', async (req, res) => {
 app.post('/staff', async (req, res) => {
   const { name, phone, email, position } = req.body;
   try {
-    const [result] = await db.query('INSERT INTO staff (name, phone, email, position) VALUES (?, ?, ?, ?)', [name, phone, email, position]);
-    res.json({ message: 'Thêm nhân viên thành công', id: result.insertId });
+    const { roomid, name, phone, checkin, checkout } = req.body;
+
+await db.query(
+  'INSERT INTO booking (roomid, name, phone, checkin, checkout) VALUES (?, ?, ?, ?, ?)',
+  [roomid, name, phone, checkin, checkout]
+);
+
   } catch (err) {
     res.status(500).json({ error: 'Lỗi thêm nhân viên' });
   }
