@@ -1,0 +1,21 @@
+{
+  "name": "backend-qlks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanphan04/backend-qlks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanphan04/backend-qlks/issues"
+  },
+  "homepage": "https://github.com/vanphan04/backend-qlks#readme",
+  "description": ""
+}
