@@ -1,6 +1,14 @@
 const cors = require("cors");
 const express = require("express");
 // const dotenv = require('dotenv');
+// Thay bcrypt bằng bcryptjs
+const bcrypt = require('bcryptjs');
+
+// Hash mật khẩu
+const hash = await bcrypt.hash(password, 10);
+
+// So sánh mật khẩu
+const match = await bcrypt.compare(password, hash);
 const mysql = require("mysql2/promise");
 // dotenv.config();
 const path = require("path"); // ✅ Dòng này là bắt buộc
