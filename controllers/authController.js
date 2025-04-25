@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcryptjs');
-
-const db = require("../connectDB.js/db");
+const db = require("./connectDB.js/db");
 require("dotenv").config();
 
 exports.LoginHehe = async (req, res) => {
