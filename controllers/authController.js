@@ -18,7 +18,7 @@ exports.LoginHehe = async (req, res) => {
 
     const user = rows[0];
 
-    const match = await bcrypt.compare(password, user.PhoneNumber);
+    const match = await bcrypt.compare(password, user.Password);
     if (!match) {
       return res.status(401).json({ message: "Sai tài khoản hoặc mật khẩu" });
     }
