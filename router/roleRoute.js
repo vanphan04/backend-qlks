@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs');
 const { verifyToken, checkRole } = require("../middleware/authMiddleware");
 const roleController = require("../controllers/roleController");
 
