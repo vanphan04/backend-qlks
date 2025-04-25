@@ -3,7 +3,7 @@ const express = require("express");
 // const dotenv = require('dotenv');
 const mysql = require("mysql2/promise");
 // dotenv.config();
-const path = require("path"); // ✅ Dòng này là bắt buộc
+const path = require("path"); 
 const app = express();
 const PORT = 3000;
 
