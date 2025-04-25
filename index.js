@@ -18,11 +18,11 @@ app.use(
 app.use(express.json());
 
 const db = mysql.createPool({
-  host: "localhost",
-  port: 3306,
+  host: "gondola.proxy.rlwy.net",       // ✅ host từ MYSQL_PUBLIC_URL
+  port: 34491,                           // ✅ port từ MYSQL_PUBLIC_URL
   user: "root",
-  password: "", // nếu bạn có mật khẩu thì nhập vào đây
-  database: "hotelmanagement",
+  password: "GHinzlDxpgKJtAXSpVxkVPLmWOLuteNQ",
+  database: "railway",
 });
 
 // ROUTES
