@@ -18,8 +18,8 @@ app.use(
 app.use(express.json());
 
 const db = mysql.createPool({
-  host: "gondola.proxy.rlwy.net",       // ✅ host từ MYSQL_PUBLIC_URL
-  port: 34491,                           // ✅ port từ MYSQL_PUBLIC_URL
+  host: "gondola.proxy.rlwy.net",       
+  port: 34491,                           
   user: "root",
   password: "GHinzlDxpgKJtAXSpVxkVPLmWOLuteNQ",
   database: "railway",
