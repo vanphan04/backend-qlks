@@ -1,24 +1,28 @@
 {
-  "name": "my_sever",
+  "name": "backend-qlks",
   "version": "1.0.0",
+  "description": "Backend quản lý khách sạn",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "vanphan04",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "axios": "^1.8.4",
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "mysql2": "^3.14.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanphan04/backend-qlks.git"
   },
-  "devDependencies": {
-    "prettier": "^3.5.3"
+  "bugs": {
+    "url": "https://github.com/vanphan04/backend-qlks/issues"
+  },
+  "homepage": "https://github.com/vanphan04/backend-qlks#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.0"
   }
 }

@@ -6,7 +6,7 @@ const mysql = require("mysql2/promise");
 const path = require("path"); 
 const app = express();
 const PORT = 3000;
-
+const bcrypt = require('bcryptjs');
 app.use(
   cors({
     origin: ["http://localhost:5173"],
