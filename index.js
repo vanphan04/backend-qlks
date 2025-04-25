@@ -1,6 +1,5 @@
 const cors = require("cors");
 const express = require("express");
-const bcrypt = require('bcryptjs');
 // const dotenv = require('dotenv');
 const mysql = require("mysql2/promise");
 // dotenv.config();
@@ -19,11 +18,11 @@ app.use(
 app.use(express.json());
 
 const db = mysql.createPool({
-  host: "gondola.proxy.rlwy.net",       
-  port: 34491,                           
+  host: "localhost",
+  port: 3306,
   user: "root",
-  password: "GHinzlDxpgKJtAXSpVxkVPLmWOLuteNQ",
-  database: "railway",
+  password: "", // nếu bạn có mật khẩu thì nhập vào đây
+  database: "hotelmanagement",
 });
 
 // ROUTES
